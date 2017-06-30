@@ -1,0 +1,45 @@
+.game {
+    height: 303px;
+    width: 303px;
+    margin: auto;
+    padding: 15px 0 15px 0;
+}
+
+.row {
+    width: 100%;
+    margin: auto;
+}
+
+.box {
+    height: 100px;
+}
+
+.top, .middle {
+    border-bottom: 1px solid black;
+}
+
+.left, .center {
+    border-right: 1px solid black;
+}
+
+.col {
+    padding: 0;
+}
+
+/*.game {
+    padding-top: 100px;
+    padding-left: 100px;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+}
+
+.top, .middle {
+    border-bottom: 1px solid black;
+}
+
+.left, .center {
+    border-right: 1px solid black;
+}*/
