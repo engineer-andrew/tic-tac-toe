@@ -1,0 +1,5 @@
+<div class="game" [ngClass]="{'active': game.isActive}">
+  <div *ngFor="let i of [0, 1, 2]" class="row">
+    <div #box (click)="makeSelection(box)" *ngFor="let j of [0, 1, 2]" class="box col" [ngClass]="{'fa-5x': game.isActive, 'active': game.isActive, 'top': i===0, 'middle': i===1, 'bottom': i===2, 'left': j===0, 'center': j===1, 'right': j===2}"></div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+.game {
+    height: 66px;
+    width: 60px;
+    margin: 0 0 0 15px;
+    padding: 15px 0 15px 0;
+}
+
+.box {
+    height: 20px;
+}
+
+.game.active {
+    height: 330px;
+    width: 303px;
+    margin: auto;
+}
+
+.row {
+    width: 100%;
+    margin: auto;
+}
+
+.box.active {
+    height: 100px;
+}
+
+.top, .middle {
+    border-bottom: 1px solid black;
+}
+
+.left, .center {
+    border-right: 1px solid black;
+}
+
+.col {
+    padding: 0;
+}
