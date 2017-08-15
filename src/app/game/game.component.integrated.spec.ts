@@ -2,32 +2,29 @@ import { DebugElement } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import { GameComponent } from './game.component';
+import { Game } from '../models/game.model';
 
-describe('AppComponent', () => {
-  let component: AppComponent;
-  let fixture: ComponentFixture<AppComponent>;
+describe('GameComponent', () => {
+  let component: GameComponent;
+  let fixture: ComponentFixture<GameComponent>;
   let debugElement: DebugElement;
   let element: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        GameComponent
       ],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AppComponent);
+    fixture = TestBed.createComponent(GameComponent);
     component = fixture.componentInstance;
+    component.game = <Game>{};
     fixture.detectChanges();
   });
-
-  it('should create the app', async(() => {
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
-  }));
 
   it('should render a game', () => {
     // arrange
@@ -155,63 +152,5 @@ describe('AppComponent', () => {
       expect(component.makeSelection).toHaveBeenCalledWith(element);
       spy.calls.reset();
     }
-  });
-
-  describe('makeSelection', () => {
-    it('should add bolt to selected box when player is bolt and box is clicked', () => {
-      // arrange
-      component.player = 'bolts';
-      debugElement = fixture.debugElement.query(By.css('.top.left.box'));
-      element = debugElement.nativeElement;
-
-      // act
-      element.click();
-
-      // assert
-      expect(element.classList.contains('fa')).toBe(true);
-      expect(element.classList.contains('fa-5x')).toBe(true);
-      expect(element.classList.contains('fa-bolt')).toBe(true);
-    });
-
-    it('should add bomb to selected box when player is bomb and box is clicked', () => {
-      // arrange
-      component.player = 'bombs';
-      debugElement = fixture.debugElement.query(By.css('.top.left.box'));
-      element = debugElement.nativeElement;
-
-      // act
-      element.click();
-
-      // assert
-      expect(element.classList.contains('fa')).toBe(true);
-      expect(element.classList.contains('fa-5x')).toBe(true);
-      expect(element.classList.contains('fa-bomb')).toBe(true);
-    });
-
-    it('should change player to bolts when player is bombs and box is clicked', () => {
-      // arrange
-      component.player = 'bombs';
-      debugElement = fixture.debugElement.query(By.css('.top.left.box'));
-      element = debugElement.nativeElement;
-
-      // act
-      component.makeSelection(element);
-
-      // assert
-      expect(component.player).toBe('bolts');
-    });
-
-    it('should change player to bombs when player is bolts and box is clicked', () => {
-      // arrange
-      component.player = 'bolts';
-      debugElement = fixture.debugElement.query(By.css('.top.left.box'));
-      element = debugElement.nativeElement;
-
-      // act
-      component.makeSelection(element);
-
-      // assert
-      expect(component.player).toBe('bombs');
-    });
   });
 });
