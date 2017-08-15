@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { GameComponent } from './game/game.component';
+import { TicTacToeComponent } from './tic-tac-toe/tic-tac-toe.component';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -13,11 +13,11 @@ describe('AppComponent', () => {
     const testBed = TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        GameComponent
+        TicTacToeComponent
       ],
     });
 
-    testBed.overrideTemplate(GameComponent, '<div>{{game.isActive}}</div><div>{{game.playerTurn}}</div>');
+    testBed.overrideTemplate(TicTacToeComponent, '<div>{{game.isActive}}</div><div>{{game.playerTurn}}</div>');
 
     testBed.compileComponents();
   }));

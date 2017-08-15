@@ -1,14 +1,14 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
-import { Game } from '../models/game.model';
+import { TicTacToe } from '../models/tic-tac-toe.model';
 
 @Component({
   selector: 'ttt-game',
-  templateUrl: './game.component.html',
-  styleUrls: ['./game.component.css']
+  templateUrl: './tic-tac-toe.component.html',
+  styleUrls: ['./tic-tac-toe.component.css']
 })
-export class GameComponent {
-  @Input() game: Game;
+export class TicTacToeComponent {
+  @Input() game: TicTacToe;
   @Output() isGameOver = new EventEmitter();
 
   checkForGameOver(): boolean {

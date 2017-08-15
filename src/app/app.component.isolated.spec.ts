@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { GameComponent } from './game/game.component';
+import { TicTacToeComponent } from './tic-tac-toe/tic-tac-toe.component';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -13,7 +13,7 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        GameComponent
+        TicTacToeComponent
       ],
     }).compileComponents();
   }));

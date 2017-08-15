@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Game } from './models/game.model';
+import { TicTacToe } from './models/tic-tac-toe.model';
 
 @Component({
   selector: 'ttt-root',
@@ -8,8 +8,8 @@ import { Game } from './models/game.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public games: [Game] = [
-    <Game>{isActive: true, playerTurn: 'bolts', moves: ['', '', '', '', '', '', '', '', '']}
+  public games: [TicTacToe] = [
+    <TicTacToe>{isActive: true, playerTurn: 'bolts', moves: ['', '', '', '', '', '', '', '', '']}
   ];
 
   createNewGame() {
