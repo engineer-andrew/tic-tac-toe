@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { TicTacToe } from './models/tic-tac-toe.model';
+import { TicTacToe } from '../models/tic-tac-toe.model';
 
 @Component({
-  selector: 'ag-root',
-  template: '<h1>App Works!</h1>'
+  selector: 'ag-tic-tac-toe-canvas',
+  templateUrl: './tic-tac-toe-canvas.component.html'
 })
-export class AppComponent {
+export class TicTacToeCanvasComponent {
   public games: [TicTacToe] = [
     <TicTacToe>{isActive: true, playerTurn: 'bolts', moves: ['', '', '', '', '', '', '', '', '']}
   ];

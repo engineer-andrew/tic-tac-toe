@@ -2,25 +2,25 @@ import { DebugElement } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
-import { TicTacToeComponent } from './tic-tac-toe.component';
+import { TicTacToeGameComponent } from './tic-tac-toe-game.component';
 import { TicTacToe } from '../models/tic-tac-toe.model';
 
 describe('GameComponent', () => {
-  let component: TicTacToeComponent;
-  let fixture: ComponentFixture<TicTacToeComponent>;
+  let component: TicTacToeGameComponent;
+  let fixture: ComponentFixture<TicTacToeGameComponent>;
   let debugElement: DebugElement;
   let element: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        TicTacToeComponent
+        TicTacToeGameComponent
       ],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TicTacToeComponent);
+    fixture = TestBed.createComponent(TicTacToeGameComponent);
     component = fixture.componentInstance;
     component.game = <TicTacToe>{};
     fixture.detectChanges();

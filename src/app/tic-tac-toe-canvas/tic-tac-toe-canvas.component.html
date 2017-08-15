@@ -1,0 +1,3 @@
+<span *ngFor="let game of games">
+    <ag-game [game]="game" (isGameOver)="createNewGame()"></ag-game>
+</span>

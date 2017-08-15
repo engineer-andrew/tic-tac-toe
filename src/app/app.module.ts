@@ -4,12 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { TicTacToeComponent } from './tic-tac-toe/tic-tac-toe.component';
+import { TicTacToeGameComponent } from './tic-tac-toe-game/tic-tac-toe-game.component';
+import { TicTacToeCanvasComponent } from './tic-tac-toe-canvas/tic-tac-toe-canvas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TicTacToeComponent
+    TicTacToeGameComponent,
+    TicTacToeCanvasComponent
   ],
   imports: [
     BrowserModule,
